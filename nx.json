@@ -36,10 +36,22 @@
     },
     "@nrwl/angular:library": {
       "linter": "eslint",
-      "unitTestRunner": "jest"
+      "unitTestRunner": "jest",
+      "simpleModuleName": true
     },
     "@nrwl/angular:component": {
-      "style": "scss"
+      "style": "scss",
+      "changeDetection": "OnPush",
+      "export": true,
+      "flat": true,
+      "inlineStyle": true
+    },
+    "@nrwl/angular:scam": {
+      "style": "scss",
+      "changeDetection": "OnPush",
+      "export": true,
+      "flat": true,
+      "inlineStyle": true
     }
   },
   "defaultProject": "demo"

@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/client/shared/interfaces/src",
+  "prefix": "paltrack",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/client/shared/interfaces"],
+      "options": {
+        "jestConfig": "libs/client/shared/interfaces/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/client/shared/interfaces/**/*.ts",
+          "libs/client/shared/interfaces/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

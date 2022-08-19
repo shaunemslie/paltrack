@@ -1,0 +1,12 @@
+<dx-data-grid
+  [dataSource]="people$ | async"
+  keyExpr="email"
+  [allowColumnResizing]="true"
+  [columnAutoWidth]="true"
+>
+  <dxi-column dataField="name" dataType="string"></dxi-column>
+  <dxi-column dataField="phone" dataType="string"></dxi-column>
+  <dxi-column dataField="email" dataType="string"></dxi-column>
+  <dxi-column dataField="country" dataType="string"></dxi-column>
+  <dxi-column dataField="address" dataType="string"></dxi-column>
+</dx-data-grid>

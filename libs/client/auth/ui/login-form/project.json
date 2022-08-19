@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/client/auth/ui/login-form/src",
+  "prefix": "paltrack",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/client/auth/ui/login-form"],
+      "options": {
+        "jestConfig": "libs/client/auth/ui/login-form/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/client/auth/ui/login-form/**/*.ts",
+          "libs/client/auth/ui/login-form/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

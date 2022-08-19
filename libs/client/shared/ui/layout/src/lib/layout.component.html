@@ -1,0 +1,4 @@
+<paltrack-header (menuClick)="menuClicked()"></paltrack-header>
+<paltrack-side-navigation [isOpen]="!!(isOpenDrawer$ | async)">
+  <ng-content></ng-content>
+</paltrack-side-navigation>

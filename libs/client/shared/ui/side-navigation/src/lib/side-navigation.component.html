@@ -1,0 +1,32 @@
+<dx-drawer
+  openedStateMode="push"
+  revealMode="expand"
+  template="template"
+  height="calc(100vh - 46px)"
+  [minSize]="54"
+  [(opened)]="isOpen"
+  class="bg-gray-200"
+>
+  <div *dxTemplate="let data of 'template'">
+    <dx-list
+      [items]="navigation"
+      [width]="220"
+      selectionMode="single"
+      itemTemplate="links"
+    >
+      <div *dxTemplate="let link of 'links'">
+        <button [routerLink]="['/' + link.path]">
+          <div class="px-3 flex items-center py-1">
+            <div class="dx-list-item-icon-container flex items-center">
+              <i class="dx-icon dx-list-item-icon dx-icon-{{ link.icon }}"></i>
+            </div>
+            <span class="pl-5 text-sm">{{ link.text }}</span>
+          </div>
+        </button>
+      </div>
+    </dx-list>
+  </div>
+  <div id="view" class="h-full overflow-scroll border-l">
+    <ng-content></ng-content>
+  </div>
+</dx-drawer>

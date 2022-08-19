@@ -2,6 +2,16 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "client-auth-feature-login": "libs/client/auth/feature/login",
+    "client-auth-feature-shell": "libs/client/auth/feature/shell",
+    "client-auth-ui-login-form": "libs/client/auth/ui/login-form",
+    "client-flights-feature-flights": "libs/client/flights/feature/flights",
+    "client-home-feature-home": "libs/client/home/feature/home",
+    "client-shared-data-access-auth": "libs/client/shared/data-access/auth",
+    "client-shared-interfaces": "libs/client/shared/interfaces",
+    "client-shared-ui-header": "libs/client/shared/ui/header",
+    "client-shared-ui-layout": "libs/client/shared/ui/layout",
+    "client-shared-ui-side-navigation": "libs/client/shared/ui/side-navigation",
     "demo": "apps/demo",
     "demo-e2e": "apps/demo-e2e"
   }

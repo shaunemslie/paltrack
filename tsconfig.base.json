@@ -14,7 +14,38 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@paltrack/client/auth/feature/login": [
+        "libs/client/auth/feature/login/src/index.ts"
+      ],
+      "@paltrack/client/auth/feature/shell": [
+        "libs/client/auth/feature/shell/src/index.ts"
+      ],
+      "@paltrack/client/auth/ui/login-form": [
+        "libs/client/auth/ui/login-form/src/index.ts"
+      ],
+      "@paltrack/client/flights/feature/flights": [
+        "libs/client/flights/feature/flights/src/index.ts"
+      ],
+      "@paltrack/client/home/feature/home": [
+        "libs/client/home/feature/home/src/index.ts"
+      ],
+      "@paltrack/client/shared/data-access/auth": [
+        "libs/client/shared/data-access/auth/src/index.ts"
+      ],
+      "@paltrack/client/shared/interfaces": [
+        "libs/client/shared/interfaces/src/index.ts"
+      ],
+      "@paltrack/client/shared/ui/header": [
+        "libs/client/shared/ui/header/src/index.ts"
+      ],
+      "@paltrack/client/shared/ui/layout": [
+        "libs/client/shared/ui/layout/src/index.ts"
+      ],
+      "@paltrack/client/shared/ui/side-navigation": [
+        "libs/client/shared/ui/side-navigation/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

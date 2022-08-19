@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/client/flights/feature/flights/src",
+  "prefix": "paltrack",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/client/flights/feature/flights"],
+      "options": {
+        "jestConfig": "libs/client/flights/feature/flights/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/client/flights/feature/flights/**/*.ts",
+          "libs/client/flights/feature/flights/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

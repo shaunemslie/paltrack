@@ -1,0 +1,34 @@
+<!-- TODO: Refactor into dumb component? -->
+<dx-data-grid
+  [dataSource]="flights$ | async"
+  keyExpr="icao24"
+  [allowColumnResizing]="true"
+  [columnAutoWidth]="true"
+>
+  <dxo-paging [pageSize]="20" [pageIndex]="0"> </dxo-paging>
+  <dxo-filter-row [visible]="true"></dxo-filter-row>
+  <dxi-column dataField="icao24" dataType="string"></dxi-column>
+  <dxi-column dataField="firstSeen" dataType="number"></dxi-column>
+  <dxi-column dataField="estDepartureAirport" datTpe="string"></dxi-column>
+  <dxi-column dataField="lastSeen" dataType="number"></dxi-column>
+  <dxi-column dataField="estArrivalAirport" ddatye="string"></dxi-column>
+  <dxi-column dataField="callsign" dataType="string"></dxi-column>
+  <dxi-column dataField="estDepartureAirportHorizDistance" dataType="number">
+  </dxi-column>
+  <dxi-column dataField="estDepartureAirportVertDistance" dataType="number">
+  </dxi-column>
+  <dxi-column dataField="estArrivalAirportHorizDistance" dataType="number">
+  </dxi-column>
+  <dxi-column dataField="estArrivalAirportVertDistance" dataType="number">
+  </dxi-column>
+  <dxi-column dataField="departureAirportCandidatesCount" dataType="number">
+  </dxi-column>
+  <dxi-column dataField="arrivalAirportCandidatesCount" dataType="number">
+  </dxi-column>
+  <dxo-pager
+    [showPageSizeSelector]="true"
+    [allowedPageSizes]="[10, 20, 40]"
+    [showNavigationButtons]="true"
+  >
+  </dxo-pager>
+</dx-data-grid>
