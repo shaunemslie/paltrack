@@ -19,36 +19,20 @@
   >
     <div *dxTemplate="let data of 'item'">
       <dx-button
-        class="user-button authorization"
-        width="210px"
-        height="100%"
+        class="-mt-1"
         stylingMode="text"
+        routerLink="/auth/login"
       >
         <div *dxTemplate="let data of 'content'">
           <div class="user-panel">
             <div class="user-info">
               <div class="image-container">
                 <img
-                  class="user-avatar"
                   [src]="'https://www.gravatar.com/wavatar/' + user?.hash"
                 />
               </div>
               <div class="user-name">{{ user?.email }}</div>
             </div>
-            <dx-context-menu
-              [items]="userMenuItems"
-              target=".user-button"
-              showEvent="dxclick"
-              width="210px"
-              [position]="{
-                my: 'top',
-                at: 'bottom'
-              }"
-              cssClass="user-menu"
-            >
-            </dx-context-menu>
-            <dx-list class="dx-toolbar-menu-action" [items]="userMenuItems">
-            </dx-list>
           </div>
         </div>
       </dx-button>

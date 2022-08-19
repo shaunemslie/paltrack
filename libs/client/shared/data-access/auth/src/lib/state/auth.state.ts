@@ -7,6 +7,11 @@ import { Navigate } from '@ngxs/router-plugin';
 
 const md5 = new Md5();
 
+const USER: User = {
+  email: 'admin@flights.co.za',
+  hash: `${md5.appendStr('admin@flights.co.za').end()}`,
+}
+
 export interface AuthStateModel {
   user: User | undefined | null;
 }
@@ -23,10 +28,10 @@ export interface AuthStateModel {
 @Injectable()
 export class AuthState {
   @Selector() static user(state: AuthStateModel) {
-    return state.user;
+    return USER;
   }
   @Selector() static isAuthenticated(state: AuthStateModel) {
-    return !!state.user;
+    return !!USER;
   }
 
   @Action(Login)

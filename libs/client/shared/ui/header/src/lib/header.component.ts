@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DxButtonModule, DxContextMenuModule, DxListModule, DxToolbarModule } from 'devextreme-angular';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { Select, Store } from '@ngxs/store';
 import { AuthState, Logout } from '@paltrack/client/shared/data-access/auth';
 import { Observable } from 'rxjs';
@@ -16,7 +16,7 @@ import { User } from '@paltrack/client/shared/interfaces';
 @Component({
   selector: 'paltrack-header',
   templateUrl: './header.component.html',
-  styles: [],
+  styleUrls: ['./header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
@@ -48,7 +48,7 @@ export class HeaderComponent {
 }
 
 @NgModule({
-  imports: [CommonModule, DxToolbarModule, DxButtonModule, DxContextMenuModule, DxListModule],
+  imports: [CommonModule, RouterModule, DxToolbarModule, DxButtonModule, DxContextMenuModule, DxListModule],
   declarations: [HeaderComponent],
   exports: [HeaderComponent],
 })
